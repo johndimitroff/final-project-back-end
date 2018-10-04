@@ -15,7 +15,7 @@ const passportSetup = require("./config/passport/passport-setup.js");
 
 mongoose
   .connect(
-    "mongodb://localhost/back-end",
+    process.env.MONGODB_URI,
     { useNewUrlParser: true }
   )
   .then(x => {
@@ -57,10 +57,18 @@ app.use(
 //passport setup AFTER SESSION
 passportSetup(app);
 
-// const projectRouter = require("./routes/project-router.js");
-// app.use("/api", projectRouter);
+const projectRouter = require("./routes/project-router.js");
+app.use("/api", projectRouter);
 
 const authRouter = require("./routes/auth-router.js");
 app.use("/api", authRouter);
+
+const fileRouter = require("./routes/file-router.js");
+app.use("/api", fileRouter);
+
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+  res.sendFile(__dirname + "/public/index.html");
+});
 
 module.exports = app;

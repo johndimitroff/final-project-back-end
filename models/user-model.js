@@ -19,7 +19,24 @@ const userSchema = new Schema(
       enum: ["normal", "admin"],
       required: true,
       default: "normal"
-    }
+    },
+    projectsCreated: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Project",
+        required: true
+      }
+    ],
+    projectsContributed: [
+      {
+        amount: Number,
+        project: {
+          type: Schema.Types.ObjectId,
+          ref: "Project",
+          required: true
+        }
+      }
+    ]
   },
   {
     timestamps: true
