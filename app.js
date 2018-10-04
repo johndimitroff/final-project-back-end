@@ -34,6 +34,7 @@ app.use(logger("dev"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static(path.join(__dirname, "public")));
 
 //Allow cross-origin resource sharing (cors)
 //(access the API frmo Javascript the front-end Javascript on a different domain/origin)
@@ -68,7 +69,7 @@ app.use("/api", fileRouter);
 
 app.use((req, res, next) => {
   // If no routes match, send them the React HTML.
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 module.exports = app;
