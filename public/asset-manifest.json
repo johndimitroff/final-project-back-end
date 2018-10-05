@@ -1,9 +1,12 @@
 {
-  "main.css": "static/css/main.7383760b.css",
-  "main.css.map": "static/css/main.7383760b.css.map",
-  "main.js": "static/js/main.5943b91a.js",
-  "main.js.map": "static/js/main.5943b91a.js.map",
+  "main.css": "static/css/main.799014a7.css",
+  "main.css.map": "static/css/main.799014a7.css.map",
+  "main.js": "static/js/main.375cf95e.js",
+  "main.js.map": "static/js/main.375cf95e.js.map",
+  "static/media/1person.mp4": "static/media/1person.bad23979.mp4",
+  "static/media/3people.mp4": "static/media/3people.4f5a8a01.mp4",
+  "static/media/bunchofpeople.mp4": "static/media/bunchofpeople.6bcfc0d8.mp4",
+  "static/media/cinema5.mp4": "static/media/cinema5.1e24f809.mp4",
   "static/media/countdown.mp4": "static/media/countdown.0548e270.mp4",
-  "static/media/empty-movie-theater.mp4": "static/media/empty-movie-theater.7122fec2.mp4",
   "static/media/full-movie-theater-1.mp4": "static/media/full-movie-theater-1.bf0f1da5.mp4"
 }
